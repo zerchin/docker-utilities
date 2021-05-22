@@ -1,7 +1,7 @@
 version: '2.3'
 services:
   openldap:
-    image: 172.16.21.12/osixia/openldap:1.5.0
+    image: osixia/openldap:1.5.0
     container_name: openldap
     restart: always
     environment:
@@ -15,7 +15,7 @@ services:
       - ./slapd:/etc/ldap/slapd.d
       - ./data:/var/lib/ldap
   phpldapadmin:
-    image: 172.16.21.12/osixia/phpldapadmin:0.9.0
+    image: osixia/phpldapadmin:0.9.0
     container_name: phpldapadmin
     restart: always
     environment:
