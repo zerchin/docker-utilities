@@ -1,7 +1,7 @@
 version: '2.3'
 services:
   mysql:
-    image: 172.16.21.12/rancher/mysql:5.7
+    image: mysql:5.7
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=Rancher123
@@ -10,7 +10,7 @@ services:
     volumes:
       - ./mysql:/var/lib/mysql
   gogs:
-    image: 172.16.21.12/library/gogs/gogs:latest
+    image: gogs/gogs:latest
     restart: always
     links:
       - mysql:mysql
