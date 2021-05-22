@@ -1,0 +1,30 @@
+version: '2.3'
+services:
+  openldap:
+    image: 172.16.21.12/osixia/openldap:1.5.0
+    container_name: openldap
+    restart: always
+    environment:
+      - LDAP_ORGANISATION=rancher
+      - LDAP_DOMAIN=rancherldap.com
+      - LDAP_ADMIN_PASSWORD=Rancher123
+    ports:
+      - 389:389
+      - 636:636
+    volumes:
+      - ./slapd:/etc/ldap/slapd.d
+      - ./data:/var/lib/ldap
+  phpldapadmin:
+    image: 172.16.21.12/osixia/phpldapadmin:0.9.0
+    container_name: phpldapadmin
+    restart: always
+    environment:
+      - PHPLDAPADMIN_LDAP_HOSTS=openldap
+    links:
+      - openldap:openldap
+    depends_on:
+      - openldap
+    ports:
+      - 6443:443
+    volumes:
+      - ./phpldapadmin-certs:/container/service/phpldapadmin/assets/apache2/certs
