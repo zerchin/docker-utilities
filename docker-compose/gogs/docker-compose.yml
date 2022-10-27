@@ -5,6 +5,7 @@ services:
     restart: always
     environment:
       - MYSQL_ROOT_PASSWORD=Rancher123
+      - MYSQL_DATABASE=gogs
     ports:
       - 3306:3306
     volumes:
