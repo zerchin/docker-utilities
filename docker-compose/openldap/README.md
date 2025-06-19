@@ -1,1 +1,1 @@
-基于docker-compose快速搭建OpenLDAP服务，使用方法参考此[文档](https://www.zerchin.xyz/2021/04/29/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAOpenLDAP%E7%8E%AF%E5%A2%83%E5%B9%B6%E5%AF%B9%E6%8E%A5Rancher%E8%AE%A4%E8%AF%81/)
+基于docker-compose快速搭建OpenLDAP服务，使用方法参考此[文档](https://www.zerchin.com/2021/04/29/rancher/%E5%BF%AB%E9%80%9F%E6%90%AD%E5%BB%BAOpenLDAP%E7%8E%AF%E5%A2%83%E5%B9%B6%E5%AF%B9%E6%8E%A5Rancher%E8%AE%A4%E8%AF%81/)
